@@ -18,7 +18,7 @@ const app = express();
 const RestaurantDB = require("./modules/restaurantDB.js");
 
 // Load dotenv variables
-require("dotenv").config({path:"./config/config.env"});
+//require("dotenv").config({path:"./config/config.env"});
 const db = new RestaurantDB("mongodb+srv://sanazdn:Aghahi822@cluster0.lldrj.mongodb.net/sample_restaurants?retryWrites=true&w=majority");
 const HTTP_PORT = process.env.PORT || 8080;   
 
