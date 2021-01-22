@@ -33,7 +33,13 @@ app.use(cors());
 
 
 app.get("/", (req, res) => {
+  try{
     res.json({ message: "listening" });
+  }
+  catch(err){
+    res.status(500).json(err);  // error 500 server error
+  }
+    
   });
 
 //----
