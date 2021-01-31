@@ -64,12 +64,12 @@ app.get("/api/restaurants", (req,res) => {
 
 
 
- if(!/^[1-9]+$/.test(temp_page)){
+ if(!/^[0-9]+$/.test(temp_page)){
   res.status(400).json({message:'Invalid page, should be number!'});
     
  }
 
- if(!/^[1-9]+$/.test(temp_perpage)){
+ if(!/^[0-9]+$/.test(temp_perpage)){
   res.status(400).json({message:'Invalid perPage, should be number!'});
     
  }
