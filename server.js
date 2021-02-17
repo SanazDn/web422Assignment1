@@ -74,10 +74,7 @@ app.get("/api/restaurants", (req,res) => {
     
  }
 
- if(!/^[a-zA-Z]+$/.test(temp_borough)){
-  res.status(400).json({message:'Invalid borough, should be alphabetic!'});
-    
- }
+
 
   db.getAllRestaurants(temp_page, temp_perpage,temp_borough)
   
