@@ -62,20 +62,6 @@ app.get("/api/restaurants", (req,res) => {
      let temp_perpage=req.query.perPage;
      let temp_borough=req.query.borough;
 
-
-
- if(!/^[0-9]+$/.test(temp_page)){
-  res.status(400).json({message:'Invalid page, should be number!'});
-    
- }
-
- if(!/^[0-9]+$/.test(temp_perpage)){
-  res.status(400).json({message:'Invalid perPage, should be number!'});
-    
- }
-
-
-
   db.getAllRestaurants(temp_page, temp_perpage,temp_borough)
   
       .then((restaurants) => {
